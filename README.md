@@ -9,4 +9,5 @@ This repository contains solutions to various LeetCode problems implemented in F
 | 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeFSharp/blob/main/Solutions/Problems/GroupAnagrams.fs) |
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeFSharp/blob/main/Solutions/Problems/ContainsDuplicate.fs) |
 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeFSharp/blob/main/Solutions/Problems/ValidAnagram.fs) |
+| 271 | [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeFSharp/blob/main/Solutions/Problems/EncodeAndDecodeStrings.fs) |
 | 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeFSharp/blob/main/Solutions/Problems/TopKFrequentElements.fs) |
