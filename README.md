@@ -6,5 +6,6 @@ This repository contains solutions to various LeetCode problems implemented in F
 | # | Problem | Difficulty | Solution |
 |---|----------|------------|---------|
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeFSharp/blob/main/Solutions/Problems/TwoSum.fs) |
+| 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeFSharp/blob/main/Solutions/Problems/GroupAnagrams.fs) |
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeFSharp/blob/main/Solutions/Problems/ContainsDuplicate.fs) |
 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeFSharp/blob/main/Solutions/Problems/ValidAnagram.fs) |

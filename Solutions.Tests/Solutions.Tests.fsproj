@@ -6,9 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="problems\TwoSumTest.fs" />
-    <Compile Include="problems\ValidAnagramTest.fs" />
-    <Compile Include="problems\ContainsDuplicateTest.fs" />
+    <Compile Include="problems\*.fs" />
   </ItemGroup>
 
   <ItemGroup>
