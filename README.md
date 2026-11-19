@@ -1,5 +1,5 @@
 # LeetCode F# Solutions
-This repository contains solutions to various LeetCode problems implemented in F#. Each solution is organized by problem number, title, difficulty level, and includes a link to the code implementation. Many of the solutions are optimized for performance and readability, making them suitable for both learning and reference purposes. Whether you're preparing for coding interviews or just looking to improve your problem-solving skills, this repository is a valuable resource. This repo also includes a test project with unit tests for each solution, the tests cover the same cases of official LeetCode tests.
+This repository explores functional programming in F# through LeetCode problems. Some problems include multiple approaches to compare algorithms, data structures, and implementation styles. The table below lists each problem's number, title, difficulty, and solution. A separate test project checks examples from the problem statements; it does not reproduce LeetCode's hidden test suite or exercise every implementation variant.
 
 ## Solutions
 

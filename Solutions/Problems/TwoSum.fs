@@ -1,6 +1,9 @@
 namespace Solutions.Problems
 
+/// 1. Two Sum
+/// https://leetcode.com/problems/two-sum/
 module TwoSum =
+    /// 1. Brute force: search pairs of distinct indices. O(n²) time.
     let twoSumBruteForce nums target =
         nums
         |> Seq.indexed
@@ -12,17 +15,18 @@ module TwoSum =
         |> Seq.find (fun (_, _, sum) -> sum = target)
         |> fun (i, j, _) -> [| i; j |]
 
+    /// 2. Sort value-index pairs and search using two pointers. O(n log n) time.
     let twoSumSorting (nums: int[]) target =
-        // 1. Cria pares (valor, índice) e ordena pelo valor
+        // 1. Create value-index pairs and sort by value
         let sorted = 
             nums 
             |> Array.mapi (fun i x -> (x, i)) 
             |> Array.sortBy fst
 
-        // 2. Função recursiva que substitui o 'while' com os ponteiros
+        // 2. Recursive function that replaces the 'while' with pointers
         let rec loop left right =
             if left >= right then 
-                [||] // Caso base: ponteiros se cruzaram
+                [||] // Base case: pointers have crossed
             else
                 let (valL, idxL) = sorted.[left]
                 let (valR, idxR) = sorted.[right]
@@ -33,7 +37,8 @@ module TwoSum =
 
         loop 0 (sorted.Length - 1)
 
-    let twoSumHashMapTwoPasses nums target =
+    /// 3. Build an immutable Map, then search for complements. O(n log n) time.
+    let twoSumMapTwoPasses nums target =
         let mutable map = Map.empty
         nums |> Seq.indexed |> Seq.iter (fun (i, x) -> map <- Map.add x i map)
         nums |> Seq.indexed |> Seq.pick (fun (i, x) ->
@@ -42,15 +47,14 @@ module TwoSum =
             | Some(idx) when idx <> i -> Some([| i; idx |])
             | _ -> None)
 
+    /// 4. Search for complements using an immutable Map in one pass. O(n log n) time.
     let twoSum nums target =
         nums 
         |> Seq.indexed
-        |> Seq.scan (fun (map, result) (i, x) ->
+        |> Seq.scan (fun (map, _) (i, x) ->
             let diff = target - x
             match Map.tryFind diff map with
             | Some(idx) -> (map, Some([| idx; i |]))
             | None -> (Map.add x i map, None)
         ) (Map.empty, None)
-        //|> snd
-        //|> Option.get
         |> Seq.pick (fun (_, res) -> res)
